@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Metadati Dublin Core -->
+  <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+  
+  <!-- Collegamento a CSS -->
+  <link rel="stylesheet" type="text/css" href="stile/index-ultimo-stile.css" />
+  
+  <!-- Libreria di icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+  <!-- Collegamento a font -->
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display" rel="stylesheet" />
+  
+  <!-- Dublin Core Metadata -->
+  <meta name="DC.Title" content="Falsettos" />
+  <meta name="DC.Creator" content="Sara Paladino" />
+  <meta name="DC.Subject" content="Falsettos, canzoni" />
+  <meta name="DC.Description" content="Una raccolta dettagliata delle canzoni, degli attori e dei temi del musical Falsettos" />
+  <meta name="DC.Publisher" content="Github Pages" />
+  <meta name="DC.Date" content="2024-05-20" />
+  <meta name="DC.Type" content="Catalogo web" />
+  <meta name="DC.Format" content="Sito web" />
+  <meta name="DC.Source" content="#" />
+  <meta name="DC.Language" content="it" />
+
+   <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+  <title>Falsettos</title>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=68285aa07c84420012f17903&product=inline-share-buttons&source=platform" async="async"></script>
+</head>
+<body>
+
+
+  <!-- Sezione Header -->
+  <header>
+    <div class="header">
+      <h1><a href="index-ultimo.html">Falsettos</a></h1>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <div id="navbar" class="navbar">
+    <a href="index-ultimo.html">Home</a>
+    <a class="active" href="catalogo-ultimo.html">Catalogo</a>
+    <a href="#">Personaggi</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn">Contesto
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="linea-tempo.html" target="_blank" style="color:#A63743;">Linea del tempo</a>
+        <a href="https://www.diariodellarte.it/arte-aids-novecento/" target="_blank" style="color:#A63743;">Come l'arte racconta l'aids</a>
+        <a href="mappa-ultimo.html" target="_blank" style="color:#A63743;">Mappa della diffusione</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <ul class="breadcrumb">
+            <li><a href="file:///C:/Users/Admin/Desktop/sito%20web/index-ultimo.html">Home</a></li>
+            <li>Catalogo</li>
+        </ul>
+    </div>
+
+    <!-- Container principale -->
+    <div class="container">
+        <!-- Sidenav con filtro canzoni -->
+        <div class="sidenav">
+            <div class="accordion-container">
+                <section>
+                    <div class="flex-container-accordion">
+                        <h4 id="titolo-accordion">Filtra le canzoni in base a</h4>
+                        
+                        
+                        <button class="accordion">Chi le canta</button>
+                        <div class="panel">
+                            <ul>
+                                <meta name="DC.Creator" content="Chi la canta" />
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Tutti</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Marvin</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Whizzer</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Trina</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Mendel</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Charlotte e Cordelia</label></li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">Che ruolo hanno</button>
+                        <div class="panel">
+                            <ul>
+                                <meta name="DC.Subject" content="Che ruolo hanno" />
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Crescita</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Errore</label></li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion">In che tonalità sono</button>
+                        <div class="panel">
+                            <ul>
+                                <meta name="DC.Description" content="In che tonalità sono" />
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Do maggiore</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Re maggiore</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Sol maggiore</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> La maggiore</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> La minore</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Do minore</label></li>
+                                <li><label><input type="checkbox" style="margin-bottom:15px"> Mi maggiore</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Catalogo -->
+        <div class="main">
+            <button class="tablink" onclick="openPage('Home', this, 'lightgray')" id="defaultOpen">Primo atto</button>
+            <button class="tablink" onclick="openPage('News', this, 'lightgray')">Secondo atto</button>
+
+            <div id="Home" class="tabcontent">
+                <div class="page" data-page="1">
+                    <div class="row">
+                        <!-- Card canzoni -->
+                        <div class="column">
+                            <div class="card">
+                                <h3>Four Jews in a Room Bitching</h3>
+                                <ul class="filtri">
+                                    <li>Tutti</li>
+                                    <li>Errore</li>
+                                    <li>Do Maggiore</li>
+                                </ul>
+
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>A Tight-Knit Family</h3>
+                                 <ul class="filtri">
+                                    <li>Tutti</li>
+                                    <li>Errore</li>
+                                    <li>Do Minore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>The Thrill of First Love</h3>
+                                 <ul class="filtri">
+                                    <li>Marvin, Whizzer</li>
+                                    <li>Errore</li>
+                                    <li>Sol Maggiore</li>
+                                </ul>
+                                <p><a href="file:///C:/Users/Admin/Desktop/sito%20web/item-ultimo.html" >Vai alla canzone</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Altre card -->
+                        <div class="column">
+                            <div class="card">
+                                <h3>Marvin at the Psychiatrist</h3>
+                                 <ul class="filtri">
+                                    <li>Marvin, Jason, Whizzer, Mendel</li>
+                                    <li>Crescita</li>
+                                    <li>La Minore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>My father's a homo</h3>
+                                 <ul class="filtri">
+                                    <li>Jason, Trina, Marvin</li>
+                                    <li>Errore</li>
+                                    <li>Do maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>This had better come to an end</h3>
+                                 <ul class="filtri">
+                                    <li>Whizzer, Trina, Marvin</li>
+                                    <li>Errore</li>
+                                    <li>Re Maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>I'm breaking down</h3>
+                                 <ul class="filtri">
+                                    <li>Trina</li>
+                                    <li>Errore</li>
+                                    <li>Sol Maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Please come to our house</h3>
+                                 <ul class="filtri">
+                                    <li>Mendel, Trina, Jason</li>
+                                    <li>Errore</li>
+                                    <li>Do maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagina 2 -->
+                <div class="page" data-page="2" style="display:none;">
+                    <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <h3>A marriage proposal</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Trina's song</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>The chess game</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Making a home</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>The games I play</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Marvin hits Trina</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>I never wanted to love you</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Father to son</h3>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+                <div class="pagination">
+                <a href="#" onclick="changePage('Home', 1)">&laquo;</a>
+                <a class="active" href="#" onclick="changePage('Home', 1)">1</a>
+                <a href="#" onclick="changePage('Home', 2)">2</a>
+                <a href="#">3</a>
+                <a href="#" onclick="changePage('Home', 2)">&raquo;</a>
+            </div>
+            </div>
+
+            <div id="News" class="tabcontent">
+                <div class="page" data-page="1">
+                    <div class="row">
+                        <!-- Card canzoni -->
+                        <div class="column">
+                            <div class="card">
+                                <h3>Falsettoland</h3>
+                                <ul class="filtri">
+                                    <li>Tutti</li>
+                                    <li>Crescita</li>
+                                    <li>Do Maggiore</li>
+                                </ul>
+
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Year of the child</h3>
+                                 <ul class="filtri">
+                                    <li>Tutti</li>
+                                    <li>Errore</li>
+                                    <li>Do Minore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Miracle of judaism</h3>
+                                 <ul class="filtri">
+                                    <li>Marvin, Whizzer</li>
+                                    <li>Errore</li>
+                                    <li>Sol Maggiore</li>
+                                </ul>
+                                <p><a href="file:///C:/Users/Admin/Desktop/sito%20web/item-ultimo.html" target="_blank">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Altre card -->
+                        <div class="column">
+                            <div class="card">
+                                <h3>The baseball game</h3>
+                                 <ul class="filtri">
+                                    <li>Marvin, Jason, Whizzer, Mendel</li>
+                                    <li>Errore</li>
+                                    <li>La Minore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>A day in falsettoland</h3>
+                                 <ul class="filtri">
+                                    <li>Jason, Trina, Marvin</li>
+                                    <li>Errore</li>
+                                    <li>Do maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>This had better come to an end</h3>
+                                 <ul class="filtri">
+                                    <li>Whizzer, Trina, Marvin</li>
+                                    <li>Errore</li>
+                                    <li>Re Maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>Everyone hates his parents</h3>
+                                 <ul class="filtri">
+                                    <li>Trina</li>
+                                    <li>Errore</li>
+                                    <li>Sol Maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card">
+                                <h3>What more can I say?</h3>
+                                 <ul class="filtri">
+                                    <li>Mendel, Trina, Jason</li>
+                                    <li>Crescita</li>
+                                    <li>Do maggiore</li>
+                                </ul>
+                                <p><a href="#">Vai alla canzone</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="pagination">
+                <a href="#" onclick="changePage('Home', 1)">&laquo;</a>
+                <a class="active" href="#" onclick="changePage('Home', 1)">1</a>
+                <a href="#" onclick="changePage('Home', 2)">2</a>
+                <a href="#">3</a>
+                <a href="#" onclick="changePage('Home', 2)">&raquo;</a>
+            </div>
+
+            </div>
+
+            <!-- Paginazione -->
+        
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer">
+              <p>Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici, sotto la tutela delle leggi internazionali sul copyright/trademark.Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.</p>
+            <p><strong>&copy; 2025 Falsettos. Tutti i diritti riservati. </strong> | <a href="#"><strong>Privacy Policy</strong></a> | <a href="#"><strong>Termini di Servizio</strong></a> | <a href="WPP.html" target="_blank"><strong>Web Project Plan</strong></a></p>
+            <div class="sharethis-inline-share-buttons"></div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function changePage(tabId, pageNumber) {
+            const tab = document.getElementById(tabId);
+            const pages = tab.querySelectorAll(".page");
+
+            pages.forEach(p => {
+                p.style.display = (p.dataset.page === String(pageNumber)) ? "block" : "none";
+            });
+
+            const paginationLinks = tab.querySelectorAll(".pagination a");
+            paginationLinks.forEach(link => link.classList.remove("active"));
+
+            const linkToActivate = Array.from(paginationLinks).find(link =>
+                link.textContent.trim() === String(pageNumber)
+            );
+            if (linkToActivate) {
+                linkToActivate.classList.add("active");
+            }
+        }
+    </script>
+</body>
+</html>
