@@ -109,8 +109,8 @@ header a {
   background-color: #A63743;
   padding: 5px;
   z-index: 9999;
-  display: flex;  /* Usa flexbox per disporre i link */
-  justify-content: flex-start; /* Allinea i link a sinistra */
+  display: flex;  
+  justify-content: flex-start; 
 }
 
 #navbar a {
@@ -651,10 +651,10 @@ ul.scheda a:hover {
 
 .scorrere {
   display: flex;
-  justify-content: space-between; /* Spazio tra i pulsanti */
-  position: relative; /* Fissa la posizione in fondo alla pagina */
-  width: 100%; /* Larghezza 100% per coprire tutta la pagina */
-  padding: 10px 20px; /* Padding laterale per lasciare spazio ai pulsanti */
+  justify-content: space-between; 
+  position: relative; 
+  width: 100%; 
+  padding: 10px 20px; 
   margin:10px;
 
   
